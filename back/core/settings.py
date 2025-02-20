@@ -9,6 +9,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CURRENT_URL = 'http://127.0.0.1:8000'
+
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000'
 ]
@@ -26,6 +28,9 @@ INSTALLED_APPS = [
 
     # CORS
     'corsheaders',
+
+    # APPS
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -87,15 +92,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+AUTH_USER_MODEL = 'accounts.User'
 
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'pt-Br'
+
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
