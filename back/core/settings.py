@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 
     # APPS
     'accounts',
+    'attachments',
 ]
 
 MIDDLEWARE = [
